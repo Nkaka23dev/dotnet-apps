@@ -1,1 +1,3 @@
-# This is a dotnet-apps, a playground for .NET and ASP.NET projects
+# dotnet-apps 
+
+- This is a playground for .NET and ASP.NET projects
