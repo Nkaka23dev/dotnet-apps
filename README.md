@@ -2,7 +2,7 @@
 
 - This is a playground for .NET and ASP.NET projects
 
-### When talking about .NET development, it's important to understand the difference between, .NET, CLR(Common Language Runtime), and C#
+When talking about .NET development, it's important to understand the difference between, .NET, CLR(Common Language Runtime), and C#
 
 - CLR:(This is the crucial component of.NET ecosystem)
 It’s the execution environment for all .NET programs
