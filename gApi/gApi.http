@@ -1,6 +1,0 @@
-@gApi_HostAddress = http://localhost:5100
-
-GET {{gApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

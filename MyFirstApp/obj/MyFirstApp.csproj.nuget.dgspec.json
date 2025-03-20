@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/thegym/terrassign/dot-net/MyFirstApp/MyFirstApp.csproj": {}
+    "/Users/thegym/terrassign/dotnet-apps/MyFirstApp/MyFirstApp.csproj": {}
   },
   "projects": {
-    "/Users/thegym/terrassign/dot-net/MyFirstApp/MyFirstApp.csproj": {
+    "/Users/thegym/terrassign/dotnet-apps/MyFirstApp/MyFirstApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/thegym/terrassign/dot-net/MyFirstApp/MyFirstApp.csproj",
+        "projectUniqueName": "/Users/thegym/terrassign/dotnet-apps/MyFirstApp/MyFirstApp.csproj",
         "projectName": "MyFirstApp",
-        "projectPath": "/Users/thegym/terrassign/dot-net/MyFirstApp/MyFirstApp.csproj",
+        "projectPath": "/Users/thegym/terrassign/dotnet-apps/MyFirstApp/MyFirstApp.csproj",
         "packagesPath": "/Users/thegym/.nuget/packages/",
-        "outputPath": "/Users/thegym/terrassign/dot-net/MyFirstApp/obj/",
+        "outputPath": "/Users/thegym/terrassign/dotnet-apps/MyFirstApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/thegym/.nuget/NuGet/NuGet.Config"
