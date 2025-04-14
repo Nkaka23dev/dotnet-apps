@@ -26,4 +26,14 @@ Allow developers  to share and consume libraries
 Simplifies dependency management in .NET projects
 
 - Blazor: 
-For building web UIs, single-page application
+For building web UIs, single-page application 
+
+### about collections
+
+Use IEnumerable<T> for looping
+
+Use ICollection<T> if you need .Count
+
+Use IList<T> if you need indexing like [i]
+
+Use List<T> only if you're creating/modifying a list
