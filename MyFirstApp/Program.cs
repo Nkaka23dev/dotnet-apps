@@ -21,8 +21,8 @@ internal class Program
      var distinctname =
       employees
       .Where(e => e.Salary == 100000)
-     .Select(e => e.FirstName)
-     .Distinct();
+        .Select(e => e.FirstName)
+        .Distinct();
      
      foreach(var employee in distinctname){
        Console.WriteLine(employee);

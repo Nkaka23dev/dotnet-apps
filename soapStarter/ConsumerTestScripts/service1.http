@@ -1,0 +1,4 @@
+#uses httpyac extension
+POST http://localhost:5175/service1 
+
+GET http://localhost:5175/weatherforecast 
