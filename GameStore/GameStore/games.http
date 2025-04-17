@@ -1,0 +1,26 @@
+GET http://localhost:5055/games
+
+###
+GET http://localhost:5055/games/4
+
+### 
+POST http://localhost:5055/games
+Content-Type: application/json
+
+{
+  "Name": "Elden Ring",
+  "Genre": "Action RPG",
+  "Price": 59.99,
+  "ReleaseDate": "2022-02-25"
+}
+###
+PUT http://localhost:5055/games/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "The Witcher 3 Updated!!",
+  "genre": "RPG",
+  "price": 30543.99,
+  "releaseDAte": "2015-05-19"
+}
