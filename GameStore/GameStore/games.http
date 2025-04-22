@@ -1,7 +1,7 @@
 GET http://localhost:5055/games
 
 ###
-GET http://localhost:5055/games/4
+GET http://localhost:5055/games/1
 
 ### 
 POST http://localhost:5055/games
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 {
   "id": 1,
-  "name": "The Witcher 3 Updated!!",
+  "name": "The Witcher 3 Updated!",
   "genre": "RPG",
   "price": 30543.99,
   "releaseDAte": "2015-05-19"

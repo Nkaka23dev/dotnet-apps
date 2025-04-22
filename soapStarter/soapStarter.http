@@ -1,6 +1,6 @@
-@soapStarter_HostAddress = http://localhost:5009
+@soapStarter_HostAddress = http://localhost:5175
 
-GET {{soapStarter_HostAddress}}/weatherforecast/
+POST {{soapStarter_HostAddress}}/service1/
 Accept: application/json
 
 ###
