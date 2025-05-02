@@ -1,67 +1,71 @@
+using GameStore.Data;
 using GameStore.DTOs;
+using GameStore.Entities;
+using GameStore.Mapping;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace GameStore.GamesEndpoints;
 
 public static class GamesEndpoints
 {
- const string GetGameEndpointName = "GetGame";
+    const string GetGameEndpointName = "GetGame";
 
-private static readonly List<GameDTO> games = [
-    new GameDTO(1, "The Witcher 3", "RPG", 29.99m, new DateOnly(2015, 5, 19)),
-    new GameDTO(2, "Minecraft", "Sandbox", 19.99m, new DateOnly(2011, 11, 18)),
-    new GameDTO(3, "FIFA 24", "Sports", 59.99m, new DateOnly(2023, 9, 29)),
-    new GameDTO(4, "God of War", "Action", 49.99m, new DateOnly(2018, 4, 20)),
-    new GameDTO(5, "Hades", "Roguelike", 24.99m, new DateOnly(2020, 9, 17))
-];
-public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app){
+    public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
+    {
 
- var group = app.MapGroup("games");
-  //GET /games
-group.MapGet("/", () => games);
+        var group = app.MapGroup("games");
 
-//GET /games/id
-group.MapGet("/{id}", (int id) =>  {
-   GameDTO? game =  games.Find(e => e.Id == id);
-  return game is null? Results.NotFound(): Results.Ok(game);
-}).WithName(GetGameEndpointName);
+        group.MapGet("/", async (GameStoreContext dbContext) =>
+         await dbContext.Games
+                    .Include(game => game.Genre)
+                    .Select(game => game.ToGameSummaryDTO())
+                    .AsNoTracking()
+                    .ToListAsync());
 
-//POST /games
-group.MapPost("/", ([FromBody] CreateGameDTO newGame) => {
-   GameDTO game = new (
-     games.Count + 1,
-     newGame.Name,
-     newGame.Genre,
-     newGame.Price,
-     newGame.ReleaseDAte
-   );
-   games.Add(game);
-   return Results.CreatedAtRoute(GetGameEndpointName, new {id = game.Id}, game);
-});
+        group.MapGet("/{id}", async (int id, GameStoreContext dbContext) =>
+        {
+            Game? game = await dbContext.Games.FindAsync(id);
+            return game is null ? Results.NotFound()
+             : Results.Ok(game.ToGameDetailsDTO());
+        }).WithName(GetGameEndpointName);
 
-//PUT /games/id
-group.MapPut("/{id}", ([FromRoute] int id, [FromBody] UpdateGameDTO modifyGame) => {
-   var gameIndex = games.FindIndex(e => e.Id == id);
-   if(gameIndex == -1){
-     return Results.NotFound();
-   }
-   games[gameIndex] = new GameDTO(
-      id,
-      modifyGame.Name,
-      modifyGame.Genre,
-      modifyGame.Price,
-      modifyGame.ReleaseDAte
-   );
-   return Results.Ok(games[gameIndex]);
-});
 
-group.MapDelete("/{id}", ([FromRoute] int id) => {
-   //  var itemToDelete = games.FindIndex(e => e.Id == id);
-   //  games.RemoveAt(itemToDelete);
-    games.RemoveAll(e => e.Id == id);
-    return Results.NoContent();
+        group.MapPost("/", async ([FromBody] CreateGameDTO newGame, GameStoreContext dbContext) =>
+        {
+            Game game = newGame.ToEntity();
+    
+            dbContext.Games.Add(game);
+            await dbContext.SaveChangesAsync();
 
-});
-return group;
-}
+            return Results.CreatedAtRoute(GetGameEndpointName,
+               new { id = game.Id }, game.ToGameDetailsDTO());
+        });
+ 
+
+        group.MapPut("/{id}", async ([FromRoute]
+         int id, [FromBody] UpdateGameDTO modifyGame,
+          GameStoreContext dbContext) =>
+        {
+            var existingGame = await dbContext.Games.FindAsync(id);
+            if (existingGame is null)
+            {
+                return Results.NotFound();
+            }
+              dbContext.Entry(existingGame)
+              .CurrentValues.SetValues(modifyGame.ToEntity(id));
+            await dbContext.SaveChangesAsync();
+
+            return Results.Ok(existingGame);
+        });
+
+        group.MapDelete("/{id}", async ([FromRoute] int id, GameStoreContext dbContext) =>
+        {
+            await dbContext.Games.Where(game => game.Id == id).ExecuteDeleteAsync();
+            return Results.NoContent();
+
+        });
+        return group;
+    }
 }

@@ -36,4 +36,5 @@ Use ICollection<T> if you need .Count
 
 Use IList<T> if you need indexing like [i]
 
-Use List<T> only if you're creating/modifying a list
+Use List<T> only if you're creating/modifying a list➜
+"WebApplication.CreateBuilder(args) is a built-in method from ASP.NET Core that gives us a pre-configured builder for web apps. The builder object lets us add services (like databases, authentication, etc.) using its Services collection. The args parameter lets us pass in configuration (like environment or settings) when the app is launched. Once we’ve added everything we need, we call Build() to create the actual app, and then Run() to start it and begin handling requests."

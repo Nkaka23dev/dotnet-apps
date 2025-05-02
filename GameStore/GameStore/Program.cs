@@ -1,10 +1,20 @@
+using GameStore.Data;
 using GameStore.GamesEndpoints;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+var conneString = builder.Configuration.GetConnectionString("GameStore");
 
-app.MapGamesEndpoints();
+// builder.Services.AddDbContext<GameStoreContext>(options =>
+//  options.UseSqlite(conneString));
+builder.Services.AddSqlite<GameStoreContext>(conneString);
 
-app.Run();
+var webApp = builder.Build();
+
+webApp.MapGamesEndpoints();
+
+await webApp.MigrateDbAsync();
+
+webApp.Run();
 
