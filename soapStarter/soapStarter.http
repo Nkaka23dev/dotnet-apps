@@ -1,6 +1,24 @@
 @soapStarter_HostAddress = http://localhost:5175
 
-POST {{soapStarter_HostAddress}}/service1/
-Accept: application/json
 
-###
+POST {{soapStarter_HostAddress}}/service1
+Content-Type: application/xml
+<soap:Envelope
+ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:ser="http://some.com/service/">
+   <soap:Header/>
+   <soap:Body>
+      <ser:GetWeatherForecast/>
+   </soap:Body>
+</soap:Envelope>
+
+POST http://localhost:5175/service1 
+Content-Type: application/xml 
+<soap:Envelope
+ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:ser="http://some.com/service/">
+    <soap:Header/>
+    <soap:Body>
+       <ser:GetWeatherForecast/>
+    </soap:Body>
+</soap:Envelope> 

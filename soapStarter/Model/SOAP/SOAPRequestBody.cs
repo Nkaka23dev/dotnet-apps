@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 
 namespace soapStarter.Model.SOAP;
 
-[XmlType(Namespace = SOAPRequestBody.DefaultNamespace)]
+[XmlType(Namespace = DefaultNamespace)]
 public partial class  SOAPRequestBody
 {
     public const string DefautNamespacePrefix = "ser";

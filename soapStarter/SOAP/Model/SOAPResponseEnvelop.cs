@@ -5,7 +5,12 @@ using soapStarter.Model.SOAP;
 namespace soapStarter.SOAP.Model;
 
 [XmlRoot("Envelope", Namespace = SOAPConstants.SOAP1_1Namespace)]
-public class SOAPResponseEnvelop
+public class SOAP1_1ResponseEnvelope : SOAPResponseEnvelope{}
+
+[XmlRoot("Envelope", Namespace = SOAPConstants.SOAP1_2Namespace)]
+public class SOAP1_2ResponseEnvelope : SOAPResponseEnvelope{}
+
+public abstract partial class SOAPResponseEnvelope
 {
   protected SOAPResponseBody? _body;
   [NotNull]
