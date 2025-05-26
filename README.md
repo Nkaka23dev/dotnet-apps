@@ -38,3 +38,34 @@ Use IList<T> if you need indexing like [i]
 
 Use List<T> only if you're creating/modifying a list➜
 "WebApplication.CreateBuilder(args) is a built-in method from ASP.NET Core that gives us a pre-configured builder for web apps. The builder object lets us add services (like databases, authentication, etc.) using its Services collection. The args parameter lets us pass in configuration (like environment or settings) when the app is launched. Once we’ve added everything we need, we call Build() to create the actual app, and then Run() to start it and begin handling requests."
+
+## SOAP, WSDL, WCF AND dotnet-svcutil
+
+dotnet-svcutil is a tool that helps .NET projects talk to SOAP (WCF) web services.
+
+It does this by generating C# client code (called a proxy) from a .wsdl (Web Service Definition Language) file or URL.
+
+You can then use this client code to call the web service just like calling a local C# method.
+
+
+[ WCF Service (Server Side) ]
+         |
+         | exposes
+         ▼
+     [ WSDL File (XML) ]
+         |
+         | used by
+         ▼
+[ dotnet-svcutil Tool (Client Side) ]
+         |
+         | generates
+         ▼
+[ Proxy C# Code (Client Class) ]
+         |
+         | used by
+         ▼
+[ Your .NET App ] 
+
+## Proxy or Gateway??
+-->>>If it manages multiple services, routes, and auth → it becomes more of a gateway (e.g., using YARP, Ocelot, Kong, API Gateway).
+

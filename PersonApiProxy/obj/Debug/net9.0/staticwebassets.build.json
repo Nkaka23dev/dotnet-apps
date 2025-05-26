@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "WWyN9Ty8fZeb9mGAnPqxZJMlQ4nlcxgaIou8Uk3GiHU=",
+  "Source": "PersonApiProxy",
+  "BasePath": "_content/PersonApiProxy",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

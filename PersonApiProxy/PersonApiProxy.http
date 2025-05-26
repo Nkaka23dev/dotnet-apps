@@ -1,0 +1,6 @@
+@PersonApiProxy_HostAddress = http://localhost:5062
+
+GET {{PersonApiProxy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

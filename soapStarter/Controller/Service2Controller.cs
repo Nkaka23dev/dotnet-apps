@@ -20,7 +20,6 @@ public class Service2Controller(
     public IActionResult Post(SOAP1_2RequestEnvelope env)
     {
         var res = CreateSOAPResponseEnvelope();
-
         res.Body.GetWeatherForecastResponse = new GetWeatherForecastResponse()
         {
             WeatherForecasts = Enumerable.Range(1, 5).Select(index =>

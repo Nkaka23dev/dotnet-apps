@@ -7,6 +7,6 @@ public class SOAPResponseBody
 {
     public const string DefautNamespacePrefix = "ser";
     public const string DefaultNamespace = "http://some.com/service/";
-    public GetWeatherForecastResponse? GetWeatherForecastResponse {get; set;}
+    public GetWeatherForecastResponse? GetWeatherForecastResponse { get; set; }
 
 }

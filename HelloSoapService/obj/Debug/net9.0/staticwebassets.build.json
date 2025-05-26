@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Emb/+PjPk0pv1pwTHSS4WhbnpuOHkav3HaCbfxHnUdI=",
+  "Source": "HelloSoapService",
+  "BasePath": "_content/HelloSoapService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

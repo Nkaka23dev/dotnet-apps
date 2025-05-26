@@ -3,11 +3,11 @@ using soapStarter.ConsumerTestScripts.SOAP;
 using soapStarter.Model;
 using soapStarter.SOAP.Controllers;
 using soapStarter.SOAP.Model;
- 
+
 namespace soapStarter.Controller;
 
 [SOAPController(SOAPVersion.V1_1)]
-public class Service1Controller( 
+public class Service1Controller(
     ILogger<Service1Controller> logger,
     IWebHostEnvironment env) : SOAPControllerBase(logger, env)
 {
