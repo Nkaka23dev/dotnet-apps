@@ -3,7 +3,7 @@
   "version": "8.0.0",
   "options": {
     "inputs": [
-      "http://localhost:5116/GreetingService.svc?singleWsdl"
+      "http://localhost:5079/BenefitService.svc?singleWsdl"
     ],
     "namespaceMappings": [
       "*, ServiceReference"
@@ -11,7 +11,10 @@
     "outputFile": "Reference.cs",
     "references": [
       "Microsoft.AspNetCore.OpenApi, {Microsoft.AspNetCore.OpenApi, 9.0.2}",
-      "Microsoft.OpenApi, {Microsoft.OpenApi, 1.6.17}"
+      "Microsoft.Extensions.ObjectPool, {Microsoft.Extensions.ObjectPool, 8.0.10}",
+      "Microsoft.OpenApi, {Microsoft.OpenApi, 1.6.17}",
+      "System.Security.Cryptography.Pkcs, {System.Security.Cryptography.Pkcs, 8.0.1}",
+      "System.Security.Cryptography.Xml, {System.Security.Cryptography.Xml, 8.0.2}"
     ],
     "targetFramework": "net9.0",
     "typeReuseMode": "All"

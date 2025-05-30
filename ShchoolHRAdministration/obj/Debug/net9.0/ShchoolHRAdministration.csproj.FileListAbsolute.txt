@@ -1,0 +1,15 @@
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/bin/Debug/net9.0/ShchoolHRAdministration
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/bin/Debug/net9.0/ShchoolHRAdministration.deps.json
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/bin/Debug/net9.0/ShchoolHRAdministration.runtimeconfig.json
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/bin/Debug/net9.0/ShchoolHRAdministration.dll
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/bin/Debug/net9.0/ShchoolHRAdministration.pdb
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.AssemblyInfoInputs.cache
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.AssemblyInfo.cs
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.csproj.CoreCompileInputs.cache
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.sourcelink.json
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.dll
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/refint/ShchoolHRAdministration.dll
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.pdb
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.genruntimeconfig.cache
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ref/ShchoolHRAdministration.dll

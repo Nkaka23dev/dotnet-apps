@@ -14,26 +14,41 @@ namespace ServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/HelloSoapService.Models")]
-    public partial class Person : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetBenefitResponse", Namespace="http://schemas.datacontract.org/2004/07/Core.Domain.DTOs.Benefits")]
+    public partial class GetBenefitResponse : object
     {
         
-        private int AgeField;
+        private decimal BaseCostField;
+        
+        private string DescriptionField;
         
         private int IdField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Age
+        public decimal BaseCost
         {
             get
             {
-                return this.AgeField;
+                return this.BaseCostField;
             }
             set
             {
-                this.AgeField = value;
+                this.BaseCostField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description
+        {
+            get
+            {
+                return this.DescriptionField;
+            }
+            set
+            {
+                this.DescriptionField = value;
             }
         }
         
@@ -64,35 +79,106 @@ namespace ServiceReference
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IPerson")]
-    public interface IPerson
+    [System.Runtime.Serialization.DataContractAttribute(Name="BenefitContract", Namespace="http://benefitsoapservice.com/")]
+    public partial class BenefitContract : object
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/GetAll", ReplyAction="http://tempuri.org/IPerson/GetAllResponse")]
-        System.Threading.Tasks.Task<ServiceReference.Person[]> GetAllAsync();
+        private decimal CostField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/GetById", ReplyAction="http://tempuri.org/IPerson/GetByIdResponse")]
-        System.Threading.Tasks.Task<ServiceReference.Person> GetByIdAsync(int id);
+        private string DescriptionField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/Add", ReplyAction="http://tempuri.org/IPerson/AddResponse")]
-        System.Threading.Tasks.Task<ServiceReference.Person> AddAsync(ServiceReference.Person person);
+        private int IdField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/Update", ReplyAction="http://tempuri.org/IPerson/UpdateResponse")]
-        System.Threading.Tasks.Task<ServiceReference.Person> UpdateAsync(int id, ServiceReference.Person person);
+        private string NameField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerson/Delete", ReplyAction="http://tempuri.org/IPerson/DeleteResponse")]
-        System.Threading.Tasks.Task<bool> DeleteAsync(int id);
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Cost
+        {
+            get
+            {
+                return this.CostField;
+            }
+            set
+            {
+                this.CostField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description
+        {
+            get
+            {
+                return this.DescriptionField;
+            }
+            set
+            {
+                this.DescriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UpdateBenefit", Namespace="http://schemas.datacontract.org/2004/07/Core.Domain.DTOs.Benefits")]
+    public partial class UpdateBenefit : object
+    {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public interface IPersonChannel : ServiceReference.IPerson, System.ServiceModel.IClientChannel
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://benefitsoapservice.com/", ConfigurationName="ServiceReference.IBenefitService")]
+    public interface IBenefitService
+    {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://benefitsoapservice.com/IBenefitService/GetAllBenefits", ReplyAction="http://benefitsoapservice.com/IBenefitService/GetAllBenefitsResponse")]
+        System.Threading.Tasks.Task<ServiceReference.GetBenefitResponse[]> GetAllBenefitsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://benefitsoapservice.com/IBenefitService/CreateBenefit", ReplyAction="http://benefitsoapservice.com/IBenefitService/CreateBenefitResponse")]
+        System.Threading.Tasks.Task<ServiceReference.BenefitContract> CreateBenefitAsync(ServiceReference.BenefitContract benefit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://benefitsoapservice.com/IBenefitService/UpdateBenefit", ReplyAction="http://benefitsoapservice.com/IBenefitService/UpdateBenefitResponse")]
+        System.Threading.Tasks.Task<ServiceReference.GetBenefitResponse> UpdateBenefitAsync(int id, ServiceReference.UpdateBenefit benefit);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://benefitsoapservice.com/IBenefitService/DeleteBenefit", ReplyAction="http://benefitsoapservice.com/IBenefitService/DeleteBenefitResponse")]
+        System.Threading.Tasks.Task DeleteBenefitAsync(int benefitId);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
+    public interface IBenefitServiceChannel : ServiceReference.IBenefitService, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public partial class PersonClient : System.ServiceModel.ClientBase<ServiceReference.IPerson>, ServiceReference.IPerson
+    public partial class BenefitServiceClient : System.ServiceModel.ClientBase<ServiceReference.IBenefitService>, ServiceReference.IBenefitService
     {
         
         /// <summary>
@@ -102,62 +188,57 @@ namespace ServiceReference
         /// <param name="clientCredentials">The client credentials</param>
         static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
         
-        public PersonClient() : 
-                base(PersonClient.GetDefaultBinding(), PersonClient.GetDefaultEndpointAddress())
+        public BenefitServiceClient() : 
+                base(BenefitServiceClient.GetDefaultBinding(), BenefitServiceClient.GetDefaultEndpointAddress())
         {
-            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_IPerson.ToString();
+            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_IBenefitService.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
-        public PersonClient(EndpointConfiguration endpointConfiguration) : 
-                base(PersonClient.GetBindingForEndpoint(endpointConfiguration), PersonClient.GetEndpointAddress(endpointConfiguration))
-        {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public PersonClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
-                base(PersonClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+        public BenefitServiceClient(EndpointConfiguration endpointConfiguration) : 
+                base(BenefitServiceClient.GetBindingForEndpoint(endpointConfiguration), BenefitServiceClient.GetEndpointAddress(endpointConfiguration))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
-        public PersonClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(PersonClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+        public BenefitServiceClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
+                base(BenefitServiceClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
-        public PersonClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public BenefitServiceClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(BenefitServiceClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+        {
+            this.Endpoint.Name = endpointConfiguration.ToString();
+            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+        }
+        
+        public BenefitServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
         }
         
-        public System.Threading.Tasks.Task<ServiceReference.Person[]> GetAllAsync()
+        public System.Threading.Tasks.Task<ServiceReference.GetBenefitResponse[]> GetAllBenefitsAsync()
         {
-            return base.Channel.GetAllAsync();
+            return base.Channel.GetAllBenefitsAsync();
         }
         
-        public System.Threading.Tasks.Task<ServiceReference.Person> GetByIdAsync(int id)
+        public System.Threading.Tasks.Task<ServiceReference.BenefitContract> CreateBenefitAsync(ServiceReference.BenefitContract benefit)
         {
-            return base.Channel.GetByIdAsync(id);
+            return base.Channel.CreateBenefitAsync(benefit);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference.Person> AddAsync(ServiceReference.Person person)
+        public System.Threading.Tasks.Task<ServiceReference.GetBenefitResponse> UpdateBenefitAsync(int id, ServiceReference.UpdateBenefit benefit)
         {
-            return base.Channel.AddAsync(person);
+            return base.Channel.UpdateBenefitAsync(id, benefit);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference.Person> UpdateAsync(int id, ServiceReference.Person person)
+        public System.Threading.Tasks.Task DeleteBenefitAsync(int benefitId)
         {
-            return base.Channel.UpdateAsync(id, person);
-        }
-        
-        public System.Threading.Tasks.Task<bool> DeleteAsync(int id)
-        {
-            return base.Channel.DeleteAsync(id);
+            return base.Channel.DeleteBenefitAsync(benefitId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -174,7 +255,7 @@ namespace ServiceReference
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IPerson))
+            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IBenefitService))
             {
                 System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
                 result.MaxBufferSize = int.MaxValue;
@@ -188,27 +269,27 @@ namespace ServiceReference
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IPerson))
+            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IBenefitService))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:5116/GreetingService.svc");
+                return new System.ServiceModel.EndpointAddress("http://localhost:5079/BenefitService.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
         
         private static System.ServiceModel.Channels.Binding GetDefaultBinding()
         {
-            return PersonClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_IPerson);
+            return BenefitServiceClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_IBenefitService);
         }
         
         private static System.ServiceModel.EndpointAddress GetDefaultEndpointAddress()
         {
-            return PersonClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_IPerson);
+            return BenefitServiceClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_IBenefitService);
         }
         
         public enum EndpointConfiguration
         {
             
-            BasicHttpBinding_IPerson,
+            BasicHttpBinding_IBenefitService,
         }
     }
 }

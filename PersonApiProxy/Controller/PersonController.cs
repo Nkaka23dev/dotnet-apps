@@ -1,50 +1,47 @@
 using Microsoft.AspNetCore.Mvc;
-using ServiceReference; 
+using ServiceReference;
 
 [ApiController]
 [Route("api/[controller]")]
 public class PersonController : ControllerBase, IDisposable
 {
-    private readonly PersonClient _soapClient;
+    private readonly BenefitServiceClient _soapClient;
 
     public PersonController()
     {
         // Initialize SOAP client with generated endpoint configuration
-        _soapClient = new PersonClient(PersonClient.EndpointConfiguration.BasicHttpBinding_IPerson);
+        _soapClient = new BenefitServiceClient(BenefitServiceClient.EndpointConfiguration.BasicHttpBinding_IBenefitService);
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var people = await _soapClient.GetAllAsync();
+        var people = await _soapClient.GetAllBenefitsAsync();
         return Ok(people);
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> Get(int id)
-    {
-        var person = await _soapClient.GetByIdAsync(id);
-        if (person == null)
-            return NotFound();
-        return Ok(person);
-    }
+    // [HttpGet("{id}")]
+    // public async Task<IActionResult> Get(int id)
+    // {
+    //     var person = await _soapClient.Get
+    //     if (person == null)
+    //         return NotFound();
+    //     return Ok(person);
+    // }
 
     [HttpPost]
-    public async Task<IActionResult> Add([FromBody] Person person)
+    public async Task<IActionResult> Add([FromBody] BenefitContract benefit)
     {
-        var addedPerson = await _soapClient.AddAsync(person);
+        var addedPerson = await _soapClient.CreateBenefitAsync(benefit);
         if (addedPerson == null)
             return BadRequest("Person could not be added.");
-        return CreatedAtAction(nameof(Get), new { id = addedPerson.Id }, addedPerson);
+        return Ok("Created");
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] Person person)
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateBenefit benefit)
     {
-        if (id != person.Id)
-            return BadRequest("ID mismatch.");
-
-        var updatedPerson = await _soapClient.UpdateAsync(id, person);
+        var updatedPerson = await _soapClient.UpdateBenefitAsync(id, benefit);
         if (updatedPerson == null)
             return NotFound();
 
@@ -54,9 +51,7 @@ public class PersonController : ControllerBase, IDisposable
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        var success = await _soapClient.DeleteAsync(id);
-        if (!success)
-            return NotFound();
+        await _soapClient.DeleteBenefitAsync(id);
         return NoContent();
     }
 
