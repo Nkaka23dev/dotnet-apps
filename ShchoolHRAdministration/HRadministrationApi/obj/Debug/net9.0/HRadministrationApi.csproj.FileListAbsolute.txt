@@ -1,0 +1,12 @@
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/bin/Debug/net9.0/HRadministrationApi.deps.json
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/bin/Debug/net9.0/HRadministrationApi.dll
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/bin/Debug/net9.0/HRadministrationApi.pdb
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/HRadministrationApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/HRadministrationApi.AssemblyInfoInputs.cache
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/HRadministrationApi.AssemblyInfo.cs
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/HRadministrationApi.csproj.CoreCompileInputs.cache
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/HRadministrationApi.sourcelink.json
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/HRadministrationApi.dll
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/refint/HRadministrationApi.dll
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/HRadministrationApi.pdb
+/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/HRadministrationApi/obj/Debug/net9.0/ref/HRadministrationApi.dll

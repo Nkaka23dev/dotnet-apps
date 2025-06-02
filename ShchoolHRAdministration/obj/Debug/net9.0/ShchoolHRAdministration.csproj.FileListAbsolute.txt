@@ -4,8 +4,6 @@
 /Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/bin/Debug/net9.0/ShchoolHRAdministration.dll
 /Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/bin/Debug/net9.0/ShchoolHRAdministration.pdb
 /Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.GeneratedMSBuildEditorConfig.editorconfig
-/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.AssemblyInfoInputs.cache
-/Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.AssemblyInfo.cs
 /Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.csproj.CoreCompileInputs.cache
 /Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.sourcelink.json
 /Users/thegym/terrassign/dotnet-apps/ShchoolHRAdministration/obj/Debug/net9.0/ShchoolHRAdministration.dll
