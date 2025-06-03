@@ -1,80 +1,89 @@
-﻿namespace ShchoolHRAdministration;
+﻿using HRadministrationApi;
 
-class Program
+namespace ShchoolHRAdministration;
+
+public class Program
 {
-    delegate void LogDel(string text);
-    static void Main(string[] args)
+       static void Main(string[] args)
     {
-        Console.WriteLine("Delegate start...");
-        Console.WriteLine("Please Enter Your Name");
-        var name = Console.ReadLine();
-
-        //Accessign Deleting through static functions
-        // LogDel logDel = new LogDel(LogTextToScreen);
-        // logDel(name!);
-        // Console.ReadKey();
-
-        //Accessing delete function through instance class
-        // Log log = new();
-        // LogDel logDel = new(log.LogTextToScreen); 
-        // logDel(name!);
-
-        //MultiDelagate examples
-        Log log = new();
-        LogDel logTextToScreenDel, logTextToFileDel;
-
-        logTextToScreenDel = new LogDel(log.LogTextToScreen);
-        logTextToFileDel = new LogDel(log.LogTextToFile);
-
-        LogDel multLogDel = logTextToScreenDel + logTextToFileDel;
-        // multLogDel(name!);
-
-        //Passing multDelate example in other static function
-        LogText(multLogDel, name!);
+        // decimal totalSalaries = 0;
+        List<IEmployee> employees = [];
+        SeedData(employees);
+        // foreach (IEmployee employee in employees)
+        // {
+        //     xtotalSalaries += employee.Salary;
+        // }
+        // Console.WriteLine($"Total Annual Salaries (including bonus): {totalSalaries}");
+        Console.WriteLine($"Total Annual Salaries (including bonus): {employees.Sum(e => e.Salary)}");
         Console.ReadKey();
     }
-
-    // A function that takes delate as a parameter
-    static void LogText(LogDel logDel, string text)
+    public static void SeedData(List<IEmployee> employees)
     {
-        logDel(text);
-    }
-
-    // static void LogTextToScreen(string text)
-    // {
-    //     Console.WriteLine($"{DateTime.Now}: {text}");
-    // }
-
-    // static void LogTextToFile(string text)
-    // {
-    //     using (StreamWriter sw = new(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EricLog.txt"), true))
-    //     {
-    //         sw.WriteLine($"{DateTime.Now}, {text}");
-    //     } 
-    //     ;
-    // }
-
-
-
-}
-
-public class Log
-{
-    public void LogTextToScreen(string text)
-    {
-        Console.WriteLine($"{DateTime.Now}: {text}");
-    }
-
-    public void LogTextToFile(string text)
-    {
-        using (StreamWriter sw = new(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EricLog.txt"), true))
+        IEmployee teacher1 = new Teacher
         {
-            sw.WriteLine($"{DateTime.Now}, {text}");
-        }
-         ;
+            Id = 1,
+            FirstName = "Alice",
+            LastName = "Johnson",
+            Salary = 48000.00m
+        };
+        employees.Add(teacher1);
+        IEmployee teacher2 = new Teacher
+        {
+            Id = 2,
+            FirstName = "Brian",
+            LastName = "Smith",
+            Salary = 51500.00m
+        };
+        employees.Add(teacher2);
+        IEmployee headOfDepartment = new HeadOfDepartement
+        {
+            Id = 3,
+            FirstName = "Catherine",
+            LastName = "Lee",
+            Salary = 49900.00m
+        };
+        employees.Add(headOfDepartment);
+        IEmployee deputeHeadMaster = new DeputeHeadMaster
+        {
+            Id = 4,
+            FirstName = "David",
+            LastName = "Ngugi",
+            Salary = 53000.00m
+        };
+        employees.Add(deputeHeadMaster);
+        IEmployee headMaster = new HeadMaster
+        {
+            Id = 5,
+            FirstName = "Emily",
+            LastName = "Martins",
+            Salary = 47500.00m
+        };
+        employees.Add(headMaster);
+
     }
 
 }
 
+public class Teacher : EmployeeBase
+{
+    /// <summary>
+    /// Calculating bonus for employees
+    /// </summary>
+    public override decimal Salary { get => base.Salary * 0.02m; }
 
+}
 
+public class HeadOfDepartement : EmployeeBase
+{
+    public override decimal Salary { get => base.Salary * 0.03m; set => base.Salary = value; }
+    //  public override decimal Salary { get => base.Salary * 0.03m; }
+}
+public class DeputeHeadMaster : EmployeeBase
+{
+     public override decimal Salary { get => base.Salary * 0.04m; }
+}
+
+public class HeadMaster : EmployeeBase
+{
+     public override decimal Salary { get => base.Salary * 0.05m; }
+}
