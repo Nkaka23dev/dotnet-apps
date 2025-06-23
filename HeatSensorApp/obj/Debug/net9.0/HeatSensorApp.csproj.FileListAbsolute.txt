@@ -1,0 +1,15 @@
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/bin/Debug/net9.0/HeatSensorApp
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/bin/Debug/net9.0/HeatSensorApp.deps.json
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/bin/Debug/net9.0/HeatSensorApp.runtimeconfig.json
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/bin/Debug/net9.0/HeatSensorApp.dll
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/bin/Debug/net9.0/HeatSensorApp.pdb
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.AssemblyInfoInputs.cache
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.AssemblyInfo.cs
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.csproj.CoreCompileInputs.cache
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.sourcelink.json
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.dll
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/refint/HeatSensorApp.dll
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.pdb
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/HeatSensorApp.genruntimeconfig.cache
+/Users/thegym/terrassign/dotnet-apps/HeatSensorApp/obj/Debug/net9.0/ref/HeatSensorApp.dll
