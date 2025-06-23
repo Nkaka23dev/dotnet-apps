@@ -1,0 +1,15 @@
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/bin/Debug/net9.0/GenericIntro
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/bin/Debug/net9.0/GenericIntro.deps.json
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/bin/Debug/net9.0/GenericIntro.runtimeconfig.json
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/bin/Debug/net9.0/GenericIntro.dll
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/bin/Debug/net9.0/GenericIntro.pdb
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.AssemblyInfoInputs.cache
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.AssemblyInfo.cs
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.csproj.CoreCompileInputs.cache
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.sourcelink.json
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.dll
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/refint/GenericIntro.dll
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.pdb
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/GenericIntro.genruntimeconfig.cache
+/Users/thegym/terrassign/dotnet-apps/GenericIntro/obj/Debug/net9.0/ref/GenericIntro.dll
