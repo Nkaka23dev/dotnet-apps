@@ -1,48 +1,87 @@
-﻿using System.Collections;
-
-namespace GenericIntro;
+﻿namespace GenericIntro;
 
 public static class Program
 {
     public static void Main(string[] args)
     {
-        Salaries salaries = new();
-        // ArrayList salariesList = salaries.GetSalaries();
-        // float salary = (float)salariesList[0];
-        List<float> list = salaries.GetSalaries();
-        float salary = list[0];
-        salary += salary * 0.053f;
-        Console.WriteLine(salary);
-        Console.ReadLine();
+        int[] numbers = [2, 5, 9, 1, 5, 10, 6];
+        string[] names = ["Zoe", "Alice", "John", "Bob", "Eve"];
+        Employee[] employees = [
+            new Employee { Name = "Bob", Id = 5 },
+            new Employee { Name = "Alice", Id = 3 },
+            new Employee { Name = "Charlie", Id = 3 },
+            new Employee { Name = "Eve", Id = 6 },
+            new Employee { Name = "Zara", Id = 2 },
+            new Employee { Name = "Mike", Id = 7 },
+            new Employee { Name = "Diana", Id = 9 },
+            new Employee { Name = "Oscar", Id = 1 },
+            new Employee { Name = "Nina", Id = 8 },
+            new Employee { Name = "Luke", Id = 3 }
+        ];
+
+        SortArray<Employee>.BubbleSort(employees);
+        SortArray<int>.BubbleSort(numbers);
+        SortArray<string>.BubbleSort(names);
+        
+        foreach (string name in names)
+        {
+            Console.WriteLine($"Name: {name}- ");
+        }
+        // foreach (int num in numbers) {
+        //     Console.WriteLine($"Number: {num}- ");
+        // }
+
+        // foreach (Employee item in employees)
+        // {
+        //     Console.WriteLine(item);
+        // }
+        //  foreach (Employee employee in employees) {
+        //     Console.WriteLine($"Name: {employee.Name}, Age:{employee.Age}");
+        // }
     }
 }
-public class Salaries
+
+public class SortArray<T> where T:IComparable
 {
-    // The value of ArrayList are not strong typed(unboxing and boxing) happens, that is why we choose Generic list for type safety to enhance performance
-    // private readonly ArrayList _arrayList = new ArrayList();
-
-    private readonly List<float> _list = new List<float>();
-
-    public Salaries()
+    public static void BubbleSort(T[] arr)
     {
-        _list.Add(3000.54f);
-        _list.Add(2000.5f);
-        _list.Add(53583.65f);
-
-        // _arrayList.Add(3000.54);
-        // _arrayList.Add(2000.5);
-        // _arrayList.Add(53583.65);
-
-        // _arrayList.Add(3000.54f);
-        // _arrayList.Add(2000.5f);
-        // _arrayList.Add(53583.65f);
+        int n = arr.Length;
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j].CompareTo(arr[j + 1]) > 0)
+                {
+                    Swap(arr, j);
+                }
+            }
+        }
     }
-      public List<float> GetSalaries()
+    public static void Swap(T[] arr, int j)
     {
-        return _list;
+        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
     }
-    // public ArrayList GetSalaries()
-    // {
-    //     return _arrayList;
-    // }
+
+    internal void BubbleSort(Employee[] employees)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+public class Employee: IComparable 
+{
+    public required int Id { get; set; }
+    public required string Name { get; set; }
+
+
+    public int CompareTo(object? obj)
+    {
+        if (obj is not Employee other)
+            throw new ArgumentException("Object is not an Employee", nameof(obj));
+        return this.Id.CompareTo(other.Id);
+    }
+    public override string ToString()
+    {
+        return $"{Id}-{Name}";
+    }
 }
