@@ -1,0 +1,15 @@
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/bin/Debug/net9.0/LINQIntro
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/bin/Debug/net9.0/LINQIntro.deps.json
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/bin/Debug/net9.0/LINQIntro.runtimeconfig.json
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/bin/Debug/net9.0/LINQIntro.dll
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/bin/Debug/net9.0/LINQIntro.pdb
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.AssemblyInfoInputs.cache
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.AssemblyInfo.cs
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.csproj.CoreCompileInputs.cache
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.sourcelink.json
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.dll
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/refint/LINQIntro.dll
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.pdb
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/LINQIntro.genruntimeconfig.cache
+/Users/thegym/terrassign/dotnet-apps/LINQIntro/obj/Debug/net9.0/ref/LINQIntro.dll
