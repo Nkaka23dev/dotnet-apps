@@ -1,0 +1,15 @@
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/bin/Debug/net9.0/TodoApp
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/bin/Debug/net9.0/TodoApp.deps.json
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/bin/Debug/net9.0/TodoApp.runtimeconfig.json
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/bin/Debug/net9.0/TodoApp.dll
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/bin/Debug/net9.0/TodoApp.pdb
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.AssemblyInfoInputs.cache
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.AssemblyInfo.cs
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.csproj.CoreCompileInputs.cache
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.sourcelink.json
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.dll
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/refint/TodoApp.dll
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.pdb
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/TodoApp.genruntimeconfig.cache
+/Users/thegym/terrassign/dotnet-apps/BasicTests/TodoApp/obj/Debug/net9.0/ref/TodoApp.dll

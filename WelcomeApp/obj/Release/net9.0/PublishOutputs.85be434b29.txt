@@ -1,0 +1,7 @@
+/Users/thegym/terrassign/dotnet-apps/WelcomeApp/publish/WelcomeApp
+/Users/thegym/terrassign/dotnet-apps/WelcomeApp/publish/appsettings.Development.json
+/Users/thegym/terrassign/dotnet-apps/WelcomeApp/publish/appsettings.json
+/Users/thegym/terrassign/dotnet-apps/WelcomeApp/publish/WelcomeApp.dll
+/Users/thegym/terrassign/dotnet-apps/WelcomeApp/publish/WelcomeApp.deps.json
+/Users/thegym/terrassign/dotnet-apps/WelcomeApp/publish/WelcomeApp.runtimeconfig.json
+/Users/thegym/terrassign/dotnet-apps/WelcomeApp/publish/WelcomeApp.pdb

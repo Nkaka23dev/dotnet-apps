@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ddXHiRZdS6bzCkvV+eOE/TNdIhTQMSqO/x4oLlhIiV8=",
+  "Source": "WelcomeApp",
+  "BasePath": "_content/WelcomeApp",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
