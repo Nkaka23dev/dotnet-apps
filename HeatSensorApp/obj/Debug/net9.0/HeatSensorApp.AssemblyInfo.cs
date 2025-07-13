@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HeatSensorApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50e9d1c3cb8fa60eac07ff615e94eb94408feea0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f698c06567a719d99659fcf81d0a20267d77197f")]
 [assembly: System.Reflection.AssemblyProductAttribute("HeatSensorApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HeatSensorApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
