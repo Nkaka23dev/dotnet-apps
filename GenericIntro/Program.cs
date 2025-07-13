@@ -23,25 +23,25 @@ public static class Program
         SortArray<int>.BubbleSort(numbers);
         SortArray<string>.BubbleSort(names);
         
-        foreach (string name in names)
-        {
-            Console.WriteLine($"Name: {name}- ");
-        }
+        // foreach (string name in names)
+        // {
+        //     Console.WriteLine($"Name: {name}- ");
+        // }
         // foreach (int num in numbers) {
-        //     Console.WriteLine($"Number: {num}- ");
+        //     Console.WriteLine($"Number: {num} ");
         // }
 
         // foreach (Employee item in employees)
         // {
         //     Console.WriteLine(item);
         // }
-        //  foreach (Employee employee in employees) {
-        //     Console.WriteLine($"Name: {employee.Name}, Age:{employee.Age}");
-        // }
+         foreach (Employee employee in employees) {
+            Console.WriteLine($"Name: {employee.Name}, Age:{employee.Id}");
+        }
     }
 }
 
-public class SortArray<T> where T:IComparable
+public class SortArray<T> where T:IComparable<T>
 {
     public static void BubbleSort(T[] arr)
     {
@@ -61,27 +61,27 @@ public class SortArray<T> where T:IComparable
     {
         (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
     }
-
-    internal void BubbleSort(Employee[] employees)
-    {
-        throw new NotImplementedException();
-    }
 }
 
-public class Employee: IComparable 
+public class Employee: IComparable<Employee> 
 {
     public required int Id { get; set; }
     public required string Name { get; set; }
 
-
-    public int CompareTo(object? obj)
+    //This logics is for arrays of objects for simple strings, numbers etc.. logic are not neccessary.
+    public int CompareTo(Employee? obj)
     {
         if (obj is not Employee other)
+        {
             throw new ArgumentException("Object is not an Employee", nameof(obj));
-        return this.Id.CompareTo(other.Id);
+        }
+
+        return Name.CompareTo(other.Name);
     }
-    public override string ToString()
-    {
-        return $"{Id}-{Name}";
-    }
+    
+    //Overriding string to pring Id and Name
+    // public override string ToString()
+    // {
+    //     return $"{Id}-{Name}";
+    // }
 }
